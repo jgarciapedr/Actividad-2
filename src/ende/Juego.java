@@ -4,10 +4,10 @@
 package ende;
 
 
-public class Juego 
-{
-    public static void main(String args[])
-    {
+public class Juego {
+
+    public static void main(String[] args) {
+
         private final int EXITOS_JUGADOR1 = p1.exitos;
         private final int EXITOS_JUGADOR2 = p2.exitos;
 
@@ -41,13 +41,13 @@ public class Juego
                 EXITOS_JUGADOR2 = ++p2.exitos;
             }
             else {
-            	EXITOS_JUGADOR1 = ++p1.exitos;
+                EXITOS_JUGADOR1 = ++p1.exitos;
                 System.out.println("Jugador 1 GANA");
             }
             rondasJugadas++;
             if((p1.exitos>=3)||(p2.exitos>=3))
             {
-            	finDeJuego=true;
+                finDeJuego=true;
                 System.out.println("FIN DEL JUEGO!!");
             }
             System.out.println();
@@ -82,10 +82,12 @@ class Jugador{
         }
         return opcion;
     }
+
     public void setExitos()
     {
         exitos++;
     }
+
     public int getExitos()
     {
         return exitos;
