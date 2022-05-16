@@ -1,8 +1,7 @@
-package ende;
-
 /**
  * Simula el juego de Piedra, Papel o tijera
  */
+package ende;
 
 
 public class Juego 
@@ -85,8 +84,12 @@ class Jugador{
      */
     public String opcion_al_azar()
     {
-        String opcion="";
-        Integer c = (int)(Math.random()*3);
+
+        private int éxitos;      // número de partidas ganadas
+        private int winTotal;
+
+        private String opcion="";
+        private Integer c = (int)(Math.random()*3);
         switch(c){
             case 0:
             	opcion=("piedra");
@@ -107,7 +110,4 @@ class Jugador{
     {
         return(éxitos);
     }
-
-    private int éxitos;      // número de partidas ganadas
-    private int winTotal;
 }
