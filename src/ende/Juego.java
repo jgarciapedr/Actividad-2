@@ -28,42 +28,21 @@ public class Juego
             System.out.println("Jugador 1: " + opcionJugador1+"\t Jugador 1 - Partidas ganadas: " + EXITOS_JUGADOR1);
             opcionJugador2 = p2.opcion_al_azar();
             System.out.println("Jugador 2: " + opcionJugador2+"\t Jugador 2 - Partidas ganadas: " + EXITOS_JUGADOR2);
-            
-            if((opcionJugador1.equals("piedra"))&&(opcionJugador2.equals("papel")))
+
+            if (opcionJugador1==opcionJugador2)
             {
+                empates++;
+                System.out.println("\n\t\t\t Empate \n");
+            }else if ((opcionJugador1.equals("piedra"))&&(opcionJugador2.equals("papel")) ||
+                opcionJugador1.equals("tijeras"))&&(opcionJugador2.equals("piedra")) ||
+                (opcionJugador1.equals("papel"))&&(opcionJugador2.equals("tijeras"))) {
+
                 System.out.println("Jugador 2 GANA");
                 EXITOS_JUGADOR2 = ++p2.exitos;
-                
             }
-            else if((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("piedra")))
-            {
+            else {
             	EXITOS_JUGADOR1 = ++p1.exitos;
                 System.out.println("Jugador 1 GANA");
-            }
-            else if((opcionJugador1.equals("piedra"))&&(opcionJugador2.equals("tijeras")))
-            {
-            	EXITOS_JUGADOR1 = ++p1.exitos;
-                System.out.println("Jugador 1 GANA");
-            }
-            else if((opcionJugador1.equals("tijeras"))&&(opcionJugador2.equals("piedra")))
-            {
-            	EXITOS_JUGADOR2 = ++p2.exitos;
-                System.out.println("Jugador 2 GANA");
-            }
-            else if((opcionJugador1.equals("tijeras"))&&(opcionJugador2.equals("papel")))
-            {
-            	EXITOS_JUGADOR1 = ++p1.exitos;
-                System.out.println("Jugador 1 GANA");
-            }
-            else if((opcionJugador1.equals("papel"))&&(opcionJugador2.equals("tijeras")))
-            {
-            	EXITOS_JUGADOR2 = ++p2.exitos;
-                System.out.println("Jugador 2 GANA");
-            }
-            if(opcionJugador1==opcionJugador2)
-            {
-            	empates++;
-                System.out.println("\n\t\t\t Empate \n");
             }
             rondasJugadas++;
             if((p1.exitos>=3)||(p2.exitos>=3))
