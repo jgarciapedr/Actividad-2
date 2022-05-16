@@ -12,10 +12,10 @@ public class Juego
         private Jugador p1=new Jugador();
         private Jugador p2=new Jugador();
         private boolean fin_de_juego=false;
-        private Integer Rondasjugadas = 0;    // Número de rondas jugadas
-        private Integer EXITOS_jugador1=p1.éxitos;
-        private Integer EXITOS_jugador2=p2.éxitos;
-        private Integer EmPaTeS = 0;
+        private int Rondasjugadas = 0;    // Número de rondas jugadas
+        private int EXITOS_jugador1=p1.éxitos;
+        private int EXITOS_jugador2=p2.éxitos;
+        private int EmPaTeS = 0;
         private String opcion_JUGADOR1, opcion_JUGADOR2;
         
         // Bucle de juego
