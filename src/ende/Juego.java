@@ -9,12 +9,13 @@ public class Juego
 {
     public static void main(String args[])
     {
+        private final int EXITOS_jugador1=p1.éxitos;
+        private final int EXITOS_jugador2=p2.éxitos;
+
         private Jugador p1=new Jugador();
         private Jugador p2=new Jugador();
         private boolean fin_de_juego=false;
         private int Rondasjugadas = 0;    // Número de rondas jugadas
-        private int EXITOS_jugador1=p1.éxitos;
-        private int EXITOS_jugador2=p2.éxitos;
         private int EmPaTeS = 0;
         private String opcion_JUGADOR1, opcion_JUGADOR2;
         
